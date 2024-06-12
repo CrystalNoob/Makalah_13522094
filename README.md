@@ -26,6 +26,11 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+To activate the virtualenv:
+```shell
+. .venv/Sripts/activate
+```
+
 To run it, use:
 ```shell
 python src/find.py
