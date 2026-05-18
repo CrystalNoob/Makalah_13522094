@@ -1,7 +1,7 @@
 [project]
 name = "makalah-13522094"
 version = "0.1.0"
-description = "Add your description here"
+description = "Implemetasi dari judul makalah: Penerapan Algoritma String Matching, BFS, dan Regex: Mencari Judul yang Menggunakan Kata Kunci Masukan dari Hasil Web Scraping Judul Makalah"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
