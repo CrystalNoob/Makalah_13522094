@@ -29,12 +29,12 @@ def bfs_search(start_url: str, target_pattern: str, max_depth: int) -> set[str]:
                     soup = BeautifulSoup(response.text, "html.parser")
                     links = soup.find_all("a", href=True)
                     for link in links:
-                        absolute_url = urljoin(url, link["href"])
+                        absolute_url = urljoin(url, str(link["href"]))
                         if target_regex.search(absolute_url):
                             found_urls.add(absolute_url)
                         queue.put((absolute_url, depth + 1))
 
-        except requests.exceptions.RequestException as e:
+        except requests.exceptions.RequestException as _:
             print("Error occurred while processing URL:", url)
             break
 

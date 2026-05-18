@@ -27,15 +27,11 @@ def find_titles(start_url: str, target_pattern: str) -> list[tuple[str, str]]:
                     .decode(sys.stdout.encoding)
                     .replace("\r\n", " ")
                 )
-                titles.append(
-                    (
-                        decoded_text,
-                        (
-                            re.sub(r"(.*\/)Makalah.*\.htm", r"\1", url)
-                            + link.get("href", "/")
-                        ).replace(" ", "%20"),
-                    )
-                )
+                href = str(link.get("href", "/"))
+                absolute_url = (
+                    re.sub(r"(.*\/)Makalah.*\.htm", r"\1", url) + href
+                ).replace(" ", "%20")
+                titles.append((decoded_text, absolute_url))
         else:
             print("Failed to retrieve the webpage. Status code:", response.status_code)
     return titles

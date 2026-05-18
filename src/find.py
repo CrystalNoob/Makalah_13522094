@@ -4,14 +4,11 @@ from BM import bm_match
 from KMP import KMPSolve
 from datetime import datetime
 from process_titles import find_titles
-import os
+import subprocess
 import platform
 
 # Clear the screen
-if platform.system() == "Windows":
-    os.system("cls")
-else:
-    os.system("clear")
+_ = subprocess.run(["cls"] if platform.system() == "Windows" else ["clear"], shell=True)
 
 # Input prompt
 istring: str = input(
