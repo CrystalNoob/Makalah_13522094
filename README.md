@@ -19,21 +19,15 @@ Implemetasi dari judul makalah: _Penerapan Algoritma String Matching, BFS, dan R
 
 ## Getting started
 
-Needs Python (py) in order to run. Python can be found at [their website](https://www.python.org/downloads/). It also needs some modules that are listed in the requirements file. The requirements.txt file is located at the root of the repository folder. To automatically install all of the required modules, simply copy and paste these lines into your terminal. Using virtualenv, although optional, is recommended.
+Needs `uv` to manage dependencies and python versions, Python availability on machine is optional (if none installed, `uv` will install it for you, see `uv python list` for more information). `uv` can be found at [this website](https://docs.astral.sh/uv/getting-started/installation/), while Python can be found at [this website](https://www.python.org/downloads/) if needed. The project has some dependencies that are listed in the `pyproject.toml` file. Use `uv` to automatically install all of the required dependencies by simply executing these lines into your terminal. `uv` will automatically manage `.venv` creation.
 
-```shell
-python -m venv .venv
-pip install -r requirements.txt
+```bash
+uv sync
 ```
 
-To activate the virtualenv:
-```shell
-. .venv/Sripts/activate
-```
-
-To run it, use:
-```shell
-python src/find.py
+To start the program, run:
+```bash
+uv run python src/find.py
 ```
 
 
