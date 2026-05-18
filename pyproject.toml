@@ -1,0 +1,11 @@
+[project]
+name = "makalah-13522094"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "requests>=2.34.2",
+    "urllib3>=2.7.0",
+]
